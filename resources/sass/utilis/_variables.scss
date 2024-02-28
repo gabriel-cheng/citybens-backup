@@ -1,0 +1,119 @@
+// Body
+$body-bg: #f8fafc;
+
+// Colors
+$branco: #FFF;
+$cinza: #CCC;
+$cinza-500: #808080;
+$preto: #000;
+$color-primary: #2A43FF;
+$color-secondary: #E8FF01;
+
+.display-none { display: none !important }
+
+
+.body-valores-plano {
+
+    .sobre-plano {
+
+        border-bottom: 1px solid $preto;
+        font-weight: bold;
+        .qual-plano {
+            text-transform: capitalize;
+        }
+    }
+    ul {
+
+        span {
+            font-size: .75rem;
+            text-align: center;
+        }
+
+        li.primeira-descricao {
+            border: none;
+            span { text-transform: uppercase; }
+        }
+
+        li {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            align-items: center;
+
+            border-bottom: 1px solid $cinza;
+
+            .quantidade-parcelas, .valor-mensal {
+                color: $color-primary;
+                font-weight: bold;
+            }
+
+            .mais-informacoes {
+                .btn-complar-plano {
+                    font-size: .75rem;
+                    background: $color-primary;
+                    color: $branco;
+                    font-weight: 500;
+
+                    &:hover { background: lighten($color-primary, 15%)}
+                }
+            }
+        }
+    }
+}
+
+.btn-faca-simulacao, .btn-continue-lendo {
+
+    background: $color-secondary;
+    width: 245px;
+
+    &:hover { background: lighten($color-secondary, 15%)}
+
+    span {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $preto;
+    }
+}
+
+
+.sobre-post {
+    span { display: block }
+
+    span.data {
+        // text-transform: uppercase;
+        color: lighten($color-primary, 15%);
+        font-weight: bold;
+    }
+
+    .tags {
+        gap: 10px;
+
+        span {
+            font-weight: bold;
+            border-radius: 5px;
+
+            &:nth-child(odd) {
+                background: $color-secondary;
+            }
+            &:nth-child(even) {
+                color: $branco;
+                background: $color-primary;
+            }
+        }
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        height: 67px;
+        overflow-y: hidden;
+    }
+
+    p {
+        text-indent: 1.5em;
+        line-height: 1.25rem;
+        height: 60px;
+        overflow-y: hidden;
+        color: $cinza-500;
+    }
+}

@@ -1,0 +1,41 @@
+#faca-simulacao {
+
+    .background {
+        background-image: url('../../img/faca-simulacao/background.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 500px;
+
+            @media(max-width: 992px) {
+                grid-template-columns: 1fr;
+                .bg-2 { display: none !important; }
+            }
+
+            .faca {
+                color: $branco;
+
+                h1 {
+                    font-size: 2.25rem;
+                    font-weight: 300;
+                    line-height: 2.5rem;
+                }
+
+                p {
+                    font-weight: 100;
+                    line-height: 1.5rem;
+                }
+            }
+
+            .bg-2 {
+                img { max-width: 550px; }
+            }
+        }
+    }
+
+
+}

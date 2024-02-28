@@ -1,0 +1,115 @@
+#vantagens {
+    background: $preto;
+
+    .title {
+        text-align: center;
+
+        h1 {
+            font-size: .875rem;
+            color: $color-secondary;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.75rem;
+            color: $branco;
+            font-weight: bold;
+        }
+    }
+
+    ul.vantagens-list {
+
+        @media(max-width: 992px) {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+
+            li + li { margin-left: 0px; }
+        }
+
+        @media(max-width: 768px) { grid-template-columns: 1fr }
+
+        li + li { margin-left: 15px; }
+        li.vantagem-item {
+            color: $branco;
+
+            > div h2 {
+                font-size: 1.125rem;
+                font-weight: 500;
+            }
+
+            > p {
+                font-weight: 100;
+            }
+        }
+
+        border-bottom: 1px solid $cinza;
+    }
+
+
+    .vantagens-mais {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        align-items: center;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+        }
+
+        .vantagens-mais-alem {
+            p {
+                font-weight: 100;
+                font-size: 1.5rem;
+                color: $branco;
+                line-height: 1.75rem;
+
+                span { font-weight: 500; }
+
+            }
+
+            .vantagens-mais-rapido {
+                p {
+                    color: $color-secondary;
+                    text-transform: uppercase;
+                    font-size: .875rem;
+                    font-weight: 500;
+                }
+
+                img { width: 110px; }
+            }
+        }
+
+        .vantagens-mais-veja {
+            color: $branco;
+
+            h2 {
+                font-size: 1.125rem;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            ul li {
+                .list-style {
+                    width: 50px !important;
+                    height: 45px !important;
+                    background-image: url('../../img/vantagens/bg-list-vantagens.png');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    span {
+                        display: block;
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                        color: $color-secondary;
+                    }
+                }
+
+                p {
+                    font-size: .875rem;
+                    line-height: 1.125rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

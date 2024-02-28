@@ -1,0 +1,27 @@
+.btn-yellow {
+    font-weight: bold !important;
+    background: $color-secondary;
+    text-transform: uppercase;
+    color: $preto !important;
+    text-shadow: initial !important;
+    text-align: center;
+    width: 200px;
+
+    &:hover {
+        color: $preto !important;
+        background: lighten($color-secondary, 15%)
+    }
+}
+
+
+.btn-blue {
+    background: $color-primary;
+    text-transform: uppercase;
+    color: $branco !important;
+    width: 135px;
+
+    &:hover {
+        color: $branco !important;
+        background: lighten($color-primary, 15%)
+    }
+}

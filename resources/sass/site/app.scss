@@ -1,0 +1,38 @@
+@charset "utf-8";
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+@import "~bootstrap/scss/bootstrap";
+@import "~sweetalert2/src/sweetalert2";
+
+// Utilis
+
+@import "../utilis/reset";
+@import "../utilis/variables";
+@import "../utilis/classes";
+
+// Includes
+@import "header";
+@import "footer";
+
+// Partials - Home
+@import "vantagens";
+@import "simular-consorcios";
+@import "quem-somos";
+@import "isso-e";
+@import "videos";
+@import "section-blog";
+@import "faca-simulacao";
+@import "simulador";
+@import "btnWhatsapp";
+@import "animacao-loading";
+
+// Blog
+@import "page-blog";
+
+// Post
+@import "page-post.scss";
+
+html {
+    scroll-behavior: smooth;
+}

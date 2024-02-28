@@ -1,0 +1,110 @@
+#header {
+    background: $preto;
+
+    position: relative;
+
+    .modal-simulator.faded {
+        width: 100%;
+        height: 100vh;
+
+        opacity: .5;
+        background: $cinza;
+        position: fixed;
+    }
+
+    .header {
+        background-image: url('../../img/header/bg.png');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        min-height: 828px;
+
+
+
+        nav {
+            .nav-link {
+                color: $branco;
+                font-weight: 500;
+                position: relative;
+                text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+
+                &:hover { color: $cinza !important; }
+            }
+
+            .logo {
+                position: relative;
+                z-index: 2;
+            }
+
+            .collapse { flex-grow: 0 !important; }
+            .navbar-toggler { background: $branco !important; }
+
+
+            .fixed {
+                position: fixed;
+                top: 50px;
+                z-index: 1;
+            }
+
+            @media(max-width: 768px) {
+
+                .logo {
+                    top: 100px;
+                }
+
+                .fixed {
+                    justify-content: center !important;
+                }
+
+                .navbar-nav {
+                    width: 250px;
+                    position: relative;
+                    right: -15px;
+                    bottom: 30px;
+                }
+
+                .more-opcoes {
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+
+                    position: relative;
+                    right: 50px;
+                }
+            }
+
+        }
+
+        .slogan {
+            font-size: 4.5rem;
+            font-weight: 100;
+            color: $branco;
+
+            span { font-weight: 400; }
+        }
+
+        .saiba-mais {
+            span {
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                font-weight: 300;
+                color: $branco;
+                letter-spacing: .5rem;
+            }
+
+            img { height: 60px; }
+        }
+    }
+
+}
+
+.header-blog {
+    // background: $branco !important;
+    border-bottom: 1px solid $cinza;
+
+    .header {
+        background-image: none !important;
+        min-height: 0px !important;
+    }
+
+    @media (max-width: 576px) { height: 200px; }
+}
+

@@ -1,0 +1,360 @@
+#header {
+    #fechar-modal, #fechar-cadastro-email {
+        width: 50px;
+        height: 50px;
+        background: $color-secondary;
+        margin: 10px;
+        position: relative;
+        z-index: 999;
+
+
+        &:hover { background: lighten($color-secondary, 15%) }
+
+        div {
+            width: 3px;
+            height: 30px;
+            background: $preto;
+        }
+
+        > div:first-child {
+            transform: rotate(45deg);
+        }
+
+        > div:last-child {
+            transform: rotate(-45deg);
+            position: relative;
+            right: 2px;
+        }
+    }
+
+    > div {
+
+        position: relative;
+
+        @keyframes slidemodalsimulador {
+            from {
+                display: none;
+            }
+
+            to {
+                width: 350px;
+                z-index: 20;
+                display: block;
+            }
+        }
+
+        .modal-simulador {
+            opacity: 1;
+            height: 100vh;
+            background: $branco;
+            width: 0px;
+
+            position: fixed;
+            right: 0;
+            top: 0;
+
+            display: none;
+
+            .content {
+                .faca {
+                    .img-smartphone { width: 150px; }
+
+                    @media(max-width: 360px) { height: 90px }
+
+                    .text {
+                        h1 {
+                            font-size: 1.5rem;
+                            line-height: 1.75rem;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+
+                        p {
+                            font-size: .875rem;
+                            color: $cinza;
+                        }
+                    }
+                }
+
+              form {
+                  label, h2 {
+                      font-size: .875rem;
+                  }
+
+                  select {
+                      height: 48px;
+                      .option {
+                          background: $color-secondary;
+                          height: 48px;
+                      }
+                  }
+
+                .tipo-simulacao {
+
+                    > div {
+                        @media (max-width: 360px) {
+                            flex-direction: column !important;
+
+                            label {
+                                margin-bottom: 5px;
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    label {
+                        text-transform: uppercase;
+                        width: 170px;
+                        border: 1px solid $preto;
+                        cursor: pointer;
+                        font-size: .875rem;
+
+                        &:hover {
+                            color: $branco;
+                            background: $preto;
+                            font-weight: 500;
+                        }
+                    }
+
+                    label.active {
+                        color: $branco;
+                        background: $preto;
+                        font-weight: 500;
+                    }
+                }
+
+                .range-valor {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    height: 15px;
+                    border-radius: 0px;
+                    border-color: black;
+                    border-width: 0px;
+                    border-style: ridge;
+                    background: #000;
+                    outline: none;
+
+                    &::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 0px;
+                        border: 1px solid $preto;
+                        background: transparent;
+
+                        background-color: $color-secondary;
+                        background-size: $preto;
+                        background-repeat: no-repeat;
+                        cursor: pointer;
+                    }
+                }
+
+                .valor-range {
+                    .valor-selecionado {
+                        border-bottom: 1px solid $preto;
+                        font-weight: bold;
+                    }
+                }
+
+                button[type=submit] {
+                    width: 230px;
+                    border: 1px;
+                    background: $preto;
+
+                    color: $branco;
+                    text-transform: uppercase;
+                    font-weight: 500;
+
+                    &:hover { background: lighten($preto, 15%)}
+
+                    img { transform: rotate(270deg) }
+                }
+            }
+
+            .content-valores-planos {
+                .header-valores-planos {
+                    h1 {
+                        font-size: 1.5rem;
+                        line-height: 1.75rem;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+
+                    p {
+                        font-size: .875rem;
+                        color: $cinza;
+                    }
+
+                    #refazer-simulacao {
+                        background: $preto;
+
+                        &:hover { background: lighten($preto, 15%)}
+
+                        span {
+                            display: block;
+                            font-size: .75rem;
+                            color: $branco;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .modal-simulador.active {
+        width: 400px;
+        overflow-y: scroll;
+        z-index: 20;
+        opacity: 1 !important;
+        display: block;
+        animation: slidemodalsimulador 3s ease-in 1s  reverse both running slidein !important;
+
+        &::-webkit-scrollbar { width: 10px; }
+
+        &::-webkit-scrollbar-thumb {
+            background: $cinza;
+            border-radius: 5px;
+
+            &:hover {
+                background: lighten($cinza, 10%);
+                cursor: pointer !important;
+            }
+        }
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+        @media(max-width: 576px){
+            width: 100%;
+        }
+    }
+    }
+}
+
+.cadastrar-email {
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    z-index: 30;
+    opacity: .9;
+    background: $preto;
+
+    @media(max-width: 576px){
+        width: 100%;
+    }
+}
+
+.content-cadastrar-email {
+    width: 350px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 40;
+
+
+    // Plano exibido tela deixe seu contato
+
+    #plano-0 {
+
+        color: $branco !important;
+        position: relative;
+        bottom: 50px;
+
+        .sobre-plano {
+            border-bottom: none !important;
+            justify-content: space-around !important;
+        }
+
+        ul {
+            li {
+                border-bottom: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 320px;
+
+                .quantidade-parcelas, .valor-mensal {
+                    color: $branco !important;
+                }
+
+                .mais-informacoes {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+
+                    justify-content: space-around !important;
+                }
+            }
+        }
+    }
+
+
+
+
+
+    @media(max-width: 576px){
+        width: 100%;
+    }
+
+    .content {
+        height: 100vh;
+        flex-direction: column-reverse !important;
+
+        .text {
+            color: $branco;
+            width: 300px;
+
+            @media(max-width: 350px){
+                left: 0px;
+                .img-text { display: none !important }
+            }
+
+            h1 {
+                text-transform: uppercase;
+                font-size: 1.125rem;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: .875rem;
+            }
+
+            .img-text {
+                position: relative;
+                top: 0;
+                right: 65px;
+                z-index: 100;
+            }
+        }
+
+        form {
+            input, button {
+                width: 300px;
+                margin-bottom: 5px;
+            }
+
+            input {
+                color: $branco;
+                height: 40px;
+                background: none;
+                border: 1px solid $branco;
+                padding-left: 15px;
+            }
+
+            button {
+                font-size: .875rem;
+                font-weight: bold;
+
+                background: $color-secondary;
+                border: none !important;
+                border-radius: 0px !important;
+
+                &:hover { background: lighten($color-secondary, 15%) }
+            }
+        }
+    }
+}

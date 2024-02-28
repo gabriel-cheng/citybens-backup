@@ -1,0 +1,33 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: DEPLOY
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy servidor Hostgator
+        uses: maddox/actions/ssh@master
+        env:
+          PRIVATE_KEY: ${{ secrets.deploy_ssh_private_key }}
+          HOST: ${{ secrets.host_deploy }}
+          USER: ${{ secrets.user_deploy }}
+          PORT: 2222
+        with:
+          args: |
+            cd site-citybens-laravel
+            git add .
+            git reset --hard
+            git pull origin master
+            composer update
+            php artisan migrate --force
+            php artisan storage:link
+            composer clear-all
+            composer cache-all
+            exit

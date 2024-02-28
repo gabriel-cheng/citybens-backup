@@ -1,0 +1,100 @@
+#footer {
+
+    ul.list-link-redes {
+        li a {
+            width: 40px;
+            height: 40px;
+            background: $preto;
+            
+            &:hover {
+                background: $cinza-500;
+            }
+
+            svg {
+                fill: $color-secondary;
+                width: 20px;
+            }
+        }
+
+        li + li { margin-left: 10px; }
+    }
+
+    > div {
+        @media (max-width: 991px) {
+            display: grid !important;
+            grid-template-columns: 2fr 1fr;
+            justify-content: space-between;
+
+            .simulation {
+                margin-top: 30px;
+            }
+
+            .address-list{
+                padding-right: 20px;
+            }
+
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+
+            .simulation, .menu, .address-list {
+                margin-top: 20px;
+            }
+
+            .address-list{
+                padding-right: 40px;
+            }
+        }
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    a {
+        color: black;
+    }
+
+    ul {
+        li img {
+            width: 34px;
+            height: 35px;
+        }
+    }
+
+    .address-list {
+        padding-right: 40px;
+    }
+
+    .address-list p {
+        line-height: normal;
+    }
+
+    .simulation {
+        button {
+            color: white;
+            background-color: $color-primary;
+            border: 0;
+            padding: 1rem;
+            margin-top: 10px;
+            width: 14.75rem;
+        }
+
+        button:hover {
+            background-color: lighten($color-primary, 15%);
+        }
+
+        button>span{
+            color: $color-secondary;
+            font-size: 20px;
+            margin-left: 15px;
+       }
+
+       li p {
+        font-size: 18px;
+        width: 236px;
+       }
+    }
+}
+

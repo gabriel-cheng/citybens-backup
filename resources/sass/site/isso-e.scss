@@ -1,0 +1,55 @@
+#isso-e{
+    >ul{
+        li {
+            p, span { cursor: default; }
+        }
+        @media (max-width: 991px){
+            .dreams, .achievements, .freedom {
+                p {
+                    padding-left: 50px;
+                }
+            }
+
+        @media (max-width: 767px){
+            .dreams, .achievements, .freedom {
+                p {
+                    padding-left: 0px;
+                }
+            }
+            .citybens-paragraph {
+                font-size: 24px;
+                margin-left: 22px;
+            }
+    }
+    }
+}
+
+    .container-isso-e {
+        padding-bottom: 33px;
+        border-bottom: 1px solid $cinza;
+    }
+
+    .dreams, .achievements, .freedom {
+        height: 65px;
+
+        display: flex;
+        align-items: center;
+
+        p {
+            font-size: 50px;
+            font-weight: 200;
+            padding-left: 250px;
+        }
+    }
+
+    .background {
+        background: black;
+        color: white;
+    }
+
+    .citybens-paragraph {
+        font-size: 34px;
+        color: $color-secondary;
+        margin-left: 72px;
+    }
+}

@@ -1,0 +1,43 @@
+#list-posts-page-blog {
+
+    border-bottom: 1px solid $cinza;
+
+    .content {
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+
+            span {
+                color: $color-secondary;
+            }
+        }
+
+        ul.list-posts {
+            li {
+                gap: 20px;
+
+                > a {
+                    img.thumbnail-post {
+                        width: 300px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            ul.list-posts {
+                li {
+                    flex-direction: column !important;
+
+                    img.thumbnail-post {
+                        width: 300px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+
+}

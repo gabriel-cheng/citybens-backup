@@ -1,0 +1,101 @@
+#blog {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media(max-width: 992px) {
+            grid-template-columns: 1fr;
+        }
+
+        .fique-por-dentro {
+            .top {
+                background: $color-secondary;
+                height: 130px;
+
+                h1 {
+                    font-size: .875rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+            }
+
+            ul.list-posts {
+
+                li.post {
+                    > a {
+
+                        &:hover {
+                            -webkit-box-shadow: 0px 0px 12px 5px rgba(0,0,0,0.24);
+                            box-shadow: 0px 0px 12px 5px rgba(0,0,0,0.24);
+                        }
+
+                        .thumbnail, .thumbnail img {
+                            width: 100px;
+                            height: 100px;
+                        }
+
+                        .sobre-post {
+                            span.data {
+                                display: block;
+
+                                font-size: .875rem;
+                                color: $color-primary;
+                                font-weight: bold;
+                            }
+
+                            h1.previa {
+                                color: $preto;
+                                font-size: 1rem;
+                                line-height: 1.5rem;
+                                font-weight: 500;
+                                height: 50px;
+                                overflow-y: hidden;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .como-funciona {
+
+            background: $color-primary;
+            color: $branco;
+            font-size: .875rem;
+
+            span.data {
+                display: block;
+
+                color: $color-secondary;
+                font-weight: 500;
+            }
+
+            p {
+                font-weight: 100;
+                border-bottom: 1px solid $branco;
+            }
+
+            .btn-ver-blog {
+                background: $preto;
+                width: 120px;
+
+                &:hover { background: lighten($preto, 15%) }
+                span {
+                    color: $branco;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+
+                img {
+                    transform: rotate(270deg);
+                }
+            }
+        }
+    }
+}

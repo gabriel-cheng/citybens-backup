@@ -1,0 +1,103 @@
+#quem-somos {
+
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+
+        @media (max-width: 1200px) {
+            display: flex;
+            flex-direction: column-reverse;
+
+            .trabalhamos {
+                margin-bottom: 40px;
+                padding-left: 0px !important;
+
+                grid-template-columns: 2fr 1fr !important;
+                justify-content: center;
+                align-self: center !important;
+
+                .lado-a {
+                    display: grid;
+                    grid-template-areas: "a b";
+
+                    .item-a { grid-area: a; }
+                    .item-b { grid-area: b; }
+                    .item-c { display: none !important; }
+                }
+
+                .lado-b { .item-d { display: none } }
+
+                @media(max-width: 991px) {
+
+                    grid-template-columns: 1fr !important;
+                    .lado-b { display: none !important}
+                }
+
+                @media (max-width: 575px) {
+                    .lado-a { grid-template-areas: "a" "b"; }
+                }
+            }
+        }
+
+        .historia {
+            h1 {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: $color-primary;
+            }
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: .875rem;
+                line-height: 1.5rem;
+            }
+
+            .veja-que-falam {
+                p {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                > div {
+                    width: 45px;
+                    height: 45px;
+                    background: $color-primary;
+                }
+            }
+        }
+
+        .trabalhamos {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+
+            align-self: flex-start;
+
+            .lado-a {
+                display: grid;
+                gap: 20px;
+
+                .item-a {
+                    p {
+                        font-size: 1.5rem;
+                        line-height: 2rem;
+                    }
+
+                    img { height: 150px; }
+                }
+            }
+
+            .lado-b {
+                display: grid;
+                gap: 20px;
+
+                .item-e { height: 200px; }
+            }
+        }
+    }
+
+}

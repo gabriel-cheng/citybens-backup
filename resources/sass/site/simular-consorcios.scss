@@ -1,0 +1,67 @@
+#simular-consorcios {
+    background: $preto;
+
+    > ul {
+        display: grid;
+        grid-template-columns: repeat(4, 335px);
+        justify-content: center;
+
+        @media(max-width: 1399px) {
+            grid-template-columns: repeat(4, 1fr);
+
+            li { > img { width: calc(100% - 1px) } }
+        }
+
+        @media(max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+
+
+            li {
+                position: relative;
+                padding: 0px !important;
+                > img { width: 100% }
+            }
+
+            li:nth-child(3), li:nth-child(4) { bottom: 50px; }
+
+
+        }
+
+        @media(max-width: 576px) {
+
+            grid-template-columns: 1fr;
+            li:nth-child(1) { top: 50px; }
+            li:nth-child(4) { bottom: 100px }
+
+        }
+
+        li {
+            > img {
+                filter: grayscale(1);
+                transition: 0.4s;
+
+                &:hover { filter: grayscale(0) }
+            }
+
+            a {
+                background: $color-secondary;
+                text-transform: uppercase;
+
+                width: 245px;
+                height: 50px;
+
+                position: relative;
+                bottom: 50px;
+
+                &:hover { background: lighten($color-secondary, 15%) }
+
+                span {
+                    color: $preto;
+                    font-weight: bold;
+                    display: block;
+                }
+            }
+        }
+
+    }
+}

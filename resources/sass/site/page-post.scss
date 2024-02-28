@@ -1,0 +1,13 @@
+#post-single-page-post {
+    border-bottom: 1px solid $cinza;
+
+    .sobre-post {
+        .thumbnail-post > img {
+            max-width: 300px;
+        }
+        h1 { margin-bottom: 15px; }
+        h1, p {
+            height: auto;
+        }
+    }
+}
