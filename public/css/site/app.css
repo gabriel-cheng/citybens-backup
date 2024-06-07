@@ -11511,7 +11511,7 @@ a:hover {
   position: fixed;
 }
 #header .header {
-  background-image: url(/images/bg.png?22b7d37306eb07bf789800a892477d3b);
+  background-image: url(/images/denis-bg.png);
   background-repeat: no-repeat;
   background-position-x: center;
   min-height: 828px;
@@ -12643,3 +12643,4 @@ html {
 }
 
 /*# sourceMappingURL=app.css.map*/
+

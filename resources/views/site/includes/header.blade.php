@@ -41,8 +41,6 @@
 
             </nav>
 
-            <p class="slogan container">realize seus <br><span>sonhos</span> </p>
-
             <div class="saiba-mais d-flex flex-column align-items-center container">
                 <span>saiba mais</span>
                 <img class="mt-2" src="{{ asset('images/header/saiba-mais.png') }}" alt="">
