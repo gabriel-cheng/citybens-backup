@@ -36,11 +36,11 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'        => "citybens consórcios", // set false to total remove
+            'title'        => "Citybens Consórcios", // set false to total remove
             'description'  => 'Encontre aqui o consórcio ideal, para você ou para sua empresa', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => false,
-            'site_name'   => 'citybens consórcios',
+            'site_name'   => 'Citybens Consórcios',
             'images'      => [],
         ],
     ],
@@ -58,7 +58,7 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'        => "citybens consórcios", // set false to total remove
+            'title'        => "Citybens Consórcios", // set false to total remove
             'description'  => 'Encontre aqui o consórcio ideal, para você ou para sua empresa', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => 'WebPage',

@@ -12,8 +12,8 @@ class HomeController extends Controller
     public function index() {
         $posts = Posts::limit(4)->get();
 
-        SEOTools::setTitle('citybens consórcios');
-        SEOTools::setDescription('Encontre aqui na citybens consórcios, o melhor consórcio para você ou para sua empresa.');
+        SEOTools::setTitle('Citybens Negócios');
+        SEOTools::setDescription('Encontre aqui na Citybens Negócios, o melhor consórcio para você ou para sua empresa.');
         SEOTools::opengraph()->setUrl(route('home'));
         SEOTools::opengraph()->addProperty('type', 'website');
         SEOTools::jsonLd()->addImage(asset('images/logo/logo-branca.png'));
