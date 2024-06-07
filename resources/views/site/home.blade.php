@@ -14,6 +14,46 @@
 
 <body>
 
+        <!--Começa aqui-->
+
+        <div id="popup-general-container" style="width: 100vw; height: 100vh; background-color: #0000007e; position: fixed; top: 0; z-index: 999;">
+        <div style="background-color: #02B2ED; position: fixed; bottom: 0; font-family: Helvetica, sans-serif; font-weight: 100; width: 100%;" class="popup-container" id="popup-alert-container">
+            <div style="position: absolute; top: -55px; right: 50px;">
+                <div id="close-button" style="color: #fff; font-size: 50px; cursor: pointer;">X</div>
+            </div>
+            <div style="margin: 40px; display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div style="font-size: 40px;">
+                    <p style="color: #000;">Comunicado</p>
+                    <p style="color: #fff;">Alerta de golpe</p>
+                </div>
+                <div style="width: 100%; max-width: 600px; color: #fff; letter-spacing: 1px;">
+                    <p style="margin: 0 0 15px 0;">
+                        Informamos que temos recebido relatos de mensagens falsas enviadas por pessoas de má-fé que se passam por profissionais da Citybens. Gostaríamos de alertar a todos que isso se trata de um golpe.
+                    </p>
+                    <p style="margin: 15px 0">
+                        Reforçamos que você nunca deve transferir dinheiro para pessoas físicas, ou jurídicas que se identificarem como representantes autorizados do escritório. Não temos a política de realizar cobranças financeiras por meio de outro número que não seja o nosso oficial <a style="color: black; font-weight: 600;" href="https://wa.me/551831176414">(18) 3117-6414</a>. Para a sua segurança, também recomendamos que você não acesse nenhum link enviado por números desconhecidos nem forneça informações pessoais.
+                    </p>
+                    <p>
+                        O nosso número de contato oficial é <a style="color: black; font-weight: 600;" href="https://wa.me/551831176414">(18) 3117-6414</a>. Se você receber qualquer comunicação suspeita ou tiver dúvidas, entre em contato conosco através deste número.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const popup_container = document.querySelector("#popup-alert-container");
+        const close_button = document.querySelector("#close-button");
+        const popup_general_container = document.querySelector("#popup-general-container");
+
+        close_button.addEventListener("click", () => {
+            popup_container.style.bottom = "-999px";
+            popup_general_container.style.display = "none";
+        });
+    </script>
+
+    <!--Termina aqui-->
+
     @include('site.includes.header')
     @include('site.partials.vantagens')
     @include('site.partials.simular-consorcios')
